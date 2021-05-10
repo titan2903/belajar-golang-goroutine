@@ -18,8 +18,8 @@ func TestOnce(t *testing.T) {
 	group := sync.WaitGroup{}
 
 	for i := 0; i < 100; i++ {
+		group.Add(1)
 		go func ()  {
-			group.Add(1)
 			once.Do(OnlyOnce) //! Hanya boleh function yang tidak boleh memiliki parameter
 			defer group.Done()	
 		}()

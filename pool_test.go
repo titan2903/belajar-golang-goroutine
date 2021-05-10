@@ -16,7 +16,7 @@ func TestPool(t *testing.T) {
 		},
 	}
 
-
+	
 	pool.Put("eko")
 	pool.Put("kurniawan")
 	pool.Put("khannedy")
